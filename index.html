@@ -1,0 +1,242 @@
+<meta charset="utf-8">
+<title>ROAMNEL</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/top.css">
+
+<svg class="visually-hidden" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l4 4"/></symbol>
+  <symbol id="i-account" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-3.3 3.6-6 8-6s8 2.7 8 6"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h3l2.5 10h9.5l2-7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 14 14"><path d="M4 1l6 6-6 6"/></symbol>
+</defs></svg>
+
+<div class="announcement container">
+  <p>自主制作（架空のブランドです）</p>
+  <p>11,000円以上のご注文で送料無料</p>
+</div>
+
+<header class="header">
+  <div class="header__inner container">
+    <a class="logo" href="index.html" aria-label="ROAMNEL トップへ">ROAMNEL</a>
+    <nav class="header__nav" aria-label="メインメニュー">
+      <a href="#">すべての道具</a>
+      <a href="#new-items">新しく届いた道具</a>
+      <a href="#types">道具の種類から探す</a>
+      <a href="#story">ROAMNELについて</a>
+    </nav>
+    <div class="header__utility">
+      <a class="tap" href="#" aria-label="検索"><svg class="icon"><use href="#i-search"/></svg></a>
+      <a class="tap" href="#" aria-label="アカウント"><svg class="icon"><use href="#i-account"/></svg></a>
+      <a class="tap" href="cart.html" aria-label="カート"><svg class="icon"><use href="#i-cart"/></svg></a>
+      <button class="tap tap--menu" type="button" id="menu-open" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__backdrop" data-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="drawer__head">
+      <span class="logo">ROAMNEL</span>
+      <button class="tap" type="button" id="menu-close" aria-label="メニューを閉じる"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <nav class="drawer__list" aria-label="メインメニュー">
+      <a class="drawer__item" href="#">すべての道具<span>→</span></a>
+      <a class="drawer__item" href="#new-items" data-close>新しく届いた道具<span>→</span></a>
+      <a class="drawer__item" href="#types" data-close>道具の種類から探す<span>→</span></a>
+      <a class="drawer__item" href="#story" data-close>ROAMNELについて<span>→</span></a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero__image" src="images/hero-1376.webp" srcset="images/hero-800.webp 800w, images/hero-1376.webp 1376w, images/hero-1920.webp 1920w, images/hero-2400.webp 2400w, images/hero-2752.webp 2752w" sizes="100vw" width="2752" height="1536" alt="">
+    <div class="hero__overlay"></div>
+    <div class="hero__text container">
+      <p class="hero__eyebrow">EVERYDAY &amp; OUTDOORS</p>
+      <h1 class="hero__title" id="hero-title">歩く日を、<br>少し軽くする道具。</h1>
+      <p class="hero__lead">毎日の散歩から週末のキャンプまで、長く使える道具を選びました。</p>
+      <a class="btn btn--primary" href="#new-items">新着を見る</a>
+    </div>
+  </section>
+
+  <section class="section scenes container" aria-labelledby="scenes-title">
+    <div class="scenes__inner">
+      <div class="section__head"><h2 class="section__title" id="scenes-title">日常と、外遊びのあいだ</h2></div>
+      <div class="scene-row">
+        <a class="scene scene--inside" href="#">
+          <img class="scene__image" src="images/inside-896.webp" srcset="images/inside-560.webp 560w, images/inside-896.webp 896w" sizes="(min-width: 900px) 636px, 358px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="scene__label"><span class="scene__name">INSIDE</span><span class="link-arrow">VIEW ITEMS →</span></span>
+        </a>
+        <a class="scene scene--outside" href="#">
+          <img class="scene__image" src="images/outside-896.webp" srcset="images/outside-560.webp 560w, images/outside-896.webp 896w" sizes="(min-width: 900px) 636px, 358px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="scene__label"><span class="scene__name">OUTSIDE</span><span class="link-arrow">VIEW ITEMS →</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section items" id="new-items" aria-labelledby="items-title">
+    <div class="section__head items__head"><h2 class="section__title" id="items-title">新しく届いた道具</h2></div>
+    <div class="carousel" id="carousel">
+      <button class="arrow arrow--prev" type="button" id="carousel-prev" aria-label="前の商品" hidden><svg class="icon" style="transform: scaleX(-1)"><use href="#i-chev"/></svg></button>
+      <div class="carousel__scroller" id="carousel-scroller" tabindex="0" role="region" aria-label="新しく届いた道具（横にスクロールできます）">
+          <a class="card" href="product.html" data-product="enamel-mug">
+            <img class="card__image" src="images/enamel-mug-640.webp" srcset="images/enamel-mug-320.webp 320w, images/enamel-mug-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="エナメルマグ" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">エナメルマグ</span><span class="card__price">¥2,860<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="canvas-tote">
+            <img class="card__image" src="images/canvas-tote-640.webp" srcset="images/canvas-tote-320.webp 320w, images/canvas-tote-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="帆布トートバッグ" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">帆布トートバッグ</span><span class="card__price">¥8,800<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="cutlery-set">
+            <img class="card__image" src="images/cutlery-set-640.webp" srcset="images/cutlery-set-320.webp 320w, images/cutlery-set-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="木のカトラリーセット" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">木のカトラリーセット</span><span class="card__price">¥3,520<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="wool-blanket">
+            <img class="card__image" src="images/wool-blanket-640.webp" srcset="images/wool-blanket-320.webp 320w, images/wool-blanket-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="ウールブランケット" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">ウールブランケット</span><span class="card__price">¥16,500<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="sierra-cup">
+            <img class="card__image" src="images/sierra-cup-640.webp" srcset="images/sierra-cup-320.webp 320w, images/sierra-cup-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="シェラカップ" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">シェラカップ</span><span class="card__price">¥2,420<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="stainless-kettle">
+            <img class="card__image" src="images/stainless-kettle-640.webp" srcset="images/stainless-kettle-320.webp 320w, images/stainless-kettle-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="ステンレスのケトル" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">ステンレスのケトル</span><span class="card__price">¥7,480<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="cookware-set">
+            <img class="card__image" src="images/cookware-set-640.webp" srcset="images/cookware-set-320.webp 320w, images/cookware-set-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="クッカーセット" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">クッカーセット</span><span class="card__price">¥9,900<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="led-lantern">
+            <img class="card__image" src="images/led-lantern-640.webp" srcset="images/led-lantern-320.webp 320w, images/led-lantern-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="LEDランタン" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">LEDランタン</span><span class="card__price">¥6,600<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="coffee-grinder">
+            <img class="card__image" src="images/coffee-grinder-640.webp" srcset="images/coffee-grinder-320.webp 320w, images/coffee-grinder-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="コーヒーミル" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">コーヒーミル</span><span class="card__price">¥12,100<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="small-knife">
+            <img class="card__image" src="images/small-knife-640.webp" srcset="images/small-knife-320.webp 320w, images/small-knife-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="小型ナイフ" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">小型ナイフ</span><span class="card__price">¥5,500<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="cutting-board">
+            <img class="card__image" src="images/cutting-board-640.webp" srcset="images/cutting-board-320.webp 320w, images/cutting-board-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="木のまな板" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">木のまな板</span><span class="card__price">¥4,950<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="glass-server">
+            <img class="card__image" src="images/glass-server-640.webp" srcset="images/glass-server-320.webp 320w, images/glass-server-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="ガラスのサーバー" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">ガラスのサーバー</span><span class="card__price">¥4,180<small>（税込）</small></span></span>
+          </a>
+          <a class="card" href="#" data-product="glass-tumbler">
+            <img class="card__image" src="images/glass-tumbler-640.webp" srcset="images/glass-tumbler-320.webp 320w, images/glass-tumbler-640.webp 640w" sizes="(min-width: 900px) 306px, 160px" width="640" height="640" alt="ガラスのタンブラー" loading="lazy" decoding="async">
+            <span class="card__info"><span class="card__name">ガラスのタンブラー</span><span class="card__price">¥1,980<small>（税込）</small></span></span>
+          </a>
+      </div>
+      <button class="arrow arrow--next" type="button" id="carousel-next" aria-label="次の商品"><svg class="icon"><use href="#i-chev"/></svg></button>
+    </div>
+    <div class="scrollbar" aria-hidden="true"><div class="scrollbar__track"><div class="scrollbar__thumb" id="carousel-thumb"></div></div></div>
+    <div class="items__all"><a class="btn btn--outline" href="#">新着をすべて見る</a></div>
+  </section>
+
+  <section class="section types container" id="types" aria-labelledby="types-title">
+    <div class="types__inner">
+      <div class="section__head"><h2 class="section__title" id="types-title">道具の種類から探す</h2></div>
+      <div class="type-grid">
+        <a class="type" href="#" data-category="kitchen">
+          <img class="type__image" src="images/category-kitchen-560.webp" srcset="images/category-kitchen-560.webp 560w, images/category-kitchen-896.webp 896w" sizes="(min-width: 900px) 416px, 173px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="type__label"><span class="type__eyebrow">KITCHEN</span><span class="type__name">キッチン<span aria-hidden="true"> →</span></span><span class="type__link link-arrow">商品を見る →</span></span>
+        </a>
+        <a class="type" href="#" data-category="coffee">
+          <img class="type__image" src="images/category-coffee-560.webp" srcset="images/category-coffee-560.webp 560w, images/category-coffee-896.webp 896w" sizes="(min-width: 900px) 416px, 173px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="type__label"><span class="type__eyebrow">COFFEE</span><span class="type__name">コーヒー<span aria-hidden="true"> →</span></span><span class="type__link link-arrow">商品を見る →</span></span>
+        </a>
+        <a class="type" href="#" data-category="bag">
+          <img class="type__image" src="images/category-bag-560.webp" srcset="images/category-bag-560.webp 560w, images/category-bag-896.webp 896w" sizes="(min-width: 900px) 416px, 173px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="type__label"><span class="type__eyebrow">BAG</span><span class="type__name">バッグ<span aria-hidden="true"> →</span></span><span class="type__link link-arrow">商品を見る →</span></span>
+        </a>
+        <a class="type" href="#" data-category="blanket">
+          <img class="type__image" src="images/category-blanket-560.webp" srcset="images/category-blanket-560.webp 560w, images/category-blanket-896.webp 896w" sizes="(min-width: 900px) 416px, 173px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="type__label"><span class="type__eyebrow">BLANKET</span><span class="type__name">ブランケット<span aria-hidden="true"> →</span></span><span class="type__link link-arrow">商品を見る →</span></span>
+        </a>
+        <a class="type" href="#" data-category="light">
+          <img class="type__image" src="images/category-light-560.webp" srcset="images/category-light-560.webp 560w, images/category-light-896.webp 896w" sizes="(min-width: 900px) 416px, 173px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="type__label"><span class="type__eyebrow">LIGHT</span><span class="type__name">ライト<span aria-hidden="true"> →</span></span><span class="type__link link-arrow">商品を見る →</span></span>
+        </a>
+        <a class="type" href="#" data-category="camp-gear">
+          <img class="type__image" src="images/category-camp-gear-560.webp" srcset="images/category-camp-gear-560.webp 560w, images/category-camp-gear-896.webp 896w" sizes="(min-width: 900px) 416px, 173px" width="896" height="1200" alt="" loading="lazy" decoding="async">
+          <span class="scrim"></span>
+          <span class="type__label"><span class="type__eyebrow">CAMP GEAR</span><span class="type__name">キャンプギア<span aria-hidden="true"> →</span></span><span class="type__link link-arrow">商品を見る →</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="story" aria-labelledby="story-title">
+    <div class="story__inner container">
+      <img class="story__image" src="images/story-1200.webp" srcset="images/story-720.webp 720w, images/story-1200.webp 1200w" sizes="(min-width: 900px) 608px, 358px" width="1200" height="896" alt="" loading="lazy" decoding="async">
+      <div class="story__text">
+        <h2 class="story__title" id="story-title">ROAMNELのこと</h2>
+        <p class="story__lead">ROAMNELは、歩くことが好きな人のための道具店です。山へ行く日も、近所を歩く日も。日常にも、外遊びにもなじむこと。素材や使い心地を確かめながら、長くそばに置きたくなる道具を選んでいます。</p>
+        <ul class="principles">
+          <li class="principle"><span class="principle__no">01</span>素材は、触れて選ぶ。</li>
+          <li class="principle"><span class="principle__no">02</span>長く使いたくなるものを。</li>
+          <li class="principle"><span class="principle__no">03</span>持ち歩きたくなる形で。</li>
+        </ul>
+        <a class="btn btn--outline" href="#">ROAMNELについて</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div>
+        <p class="logo">ROAMNEL</p>
+        <p class="footer__tagline">歩く日を、少し軽くする道具。</p>
+      </div>
+      <div class="footer__links">
+        <nav class="footer__col" aria-label="お買いもの">
+          <h2>お買いもの</h2>
+          <a href="#">すべての道具</a>
+          <a href="#new-items">新しく届いた道具</a>
+          <a href="#types">道具の種類から探す</a>
+        </nav>
+        <nav class="footer__col" aria-label="ご案内">
+          <h2>ご案内</h2>
+          <a href="#story">ROAMNELについて</a>
+          <a href="#">配送について</a>
+          <a href="#">返品・交換</a>
+          <a href="#">お問い合わせ</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__rule"></div>
+      <div class="footer__note">
+        <p>© ROAMNEL（自主制作・架空のブランド）</p>
+        <p>画像は一部AI生成です。　<a href="admin.html">管理画面（デモ）→</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>

@@ -1,0 +1,41 @@
+/* ROAMNEL design tokens — Figma variables "ROAM / Colors" and "ROAM / Spacing & Radius" */
+:root {
+  /* colors */
+  --color-bg: #f5f3ed;
+  --color-surface: #ffffff;
+  --color-text: #252a26;
+  --color-primary: #46513d;
+  --color-secondary: #d8cbb5;
+  --color-accent: #b84e2b;
+  --status-done: #2f6b4a;   --status-done-bg: #e3efe7;
+  --status-warn: #8a5a00;   --status-warn-bg: #f7ebcb;
+  --status-error: #a32a35;  --status-error-bg: #f6dfe0;
+  --status-neutral: #5b5f58; --status-neutral-bg: #ecebe5;
+  --line: rgba(37, 42, 38, 0.2);
+
+  /* spacing scale */
+  --space-0: 0; --space-4: 4px; --space-8: 8px; --space-12: 12px; --space-16: 16px;
+  --space-24: 24px; --space-32: 32px; --space-40: 40px; --space-48: 48px;
+  --space-64: 64px; --space-72: 72px; --space-80: 80px;
+
+  /* radius */
+  --radius-none: 0; --radius-md: 8px; --radius-pill: 10px;
+
+  /* layout: page side gutter (SP 16 / PC 72), keeps clear of device safe areas */
+  --gutter: 16px;
+  --pad-l: max(var(--gutter), env(safe-area-inset-left, 0px));
+  --pad-r: max(var(--gutter), env(safe-area-inset-right, 0px));
+  --font: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  color-scheme: light;
+}
+@media (min-width: 600px) { :root { --gutter: 32px; } }
+@media (min-width: 900px) {
+  /* Tablet (600-899px): wider gutter */
+  
+  /* PC: content is 90% of the window (= 1296px at 1440, the Figma design), never narrower than the 72px gutter */
+  :root {
+    --gutter: 72px;
+    --pad-l: max(var(--gutter), 5%, env(safe-area-inset-left, 0px));
+    --pad-r: max(var(--gutter), 5%, env(safe-area-inset-right, 0px));
+  }
+}

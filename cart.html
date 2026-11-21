@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>カート | ROAMNEL</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/cart.css">
+</head>
+<body class="page-max">
+
+<svg class="visually-hidden" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l4 4"/></symbol>
+  <symbol id="i-account" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-3.3 3.6-6 8-6s8 2.7 8 6"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h3l2.5 10h9.5l2-7H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 14 14"><path d="M4 1l6 6-6 6"/></symbol>
+</defs></svg>
+
+<div class="announcement container">
+  <p>自主制作（架空のブランドです）</p>
+  <p>11,000円以上のご注文で送料無料</p>
+</div>
+
+<header class="header">
+  <div class="header__inner container">
+    <a class="logo" href="index.html" aria-label="ROAMNEL トップへ">ROAMNEL</a>
+    <nav class="header__nav" aria-label="メインメニュー">
+      <a href="#">すべての道具</a>
+      <a href="index.html#new-items">新しく届いた道具</a>
+      <a href="index.html#types">道具の種類から探す</a>
+      <a href="index.html#story">ROAMNELについて</a>
+    </nav>
+    <div class="header__utility">
+      <a class="tap" href="#" aria-label="検索"><svg class="icon"><use href="#i-search"/></svg></a>
+      <a class="tap" href="#" aria-label="アカウント"><svg class="icon"><use href="#i-account"/></svg></a>
+      <a class="tap" href="cart.html" aria-label="カート"><svg class="icon"><use href="#i-cart"/></svg></a>
+      <button class="tap tap--menu" type="button" id="menu-open" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__backdrop" data-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div class="drawer__head">
+      <span class="logo">ROAMNEL</span>
+      <button class="tap" type="button" id="menu-close" aria-label="メニューを閉じる"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <nav class="drawer__list" aria-label="メインメニュー">
+      <a class="drawer__item" href="#">すべての道具<span>→</span></a>
+      <a class="drawer__item" href="index.html#new-items" data-close>新しく届いた道具<span>→</span></a>
+      <a class="drawer__item" href="index.html#types" data-close>道具の種類から探す<span>→</span></a>
+      <a class="drawer__item" href="index.html#story" data-close>ROAMNELについて<span>→</span></a>
+    </nav>
+  </div>
+</div>
+
+<main>
+  <nav class="breadcrumb container" aria-label="パンくず">
+    <a href="index.html">ホーム</a><span aria-hidden="true">/</span><span aria-current="page">カート</span>
+  </nav>
+
+  <div class="cart-main">
+    <div class="page-title"><h1>カート</h1><p id="count">4点の商品</p></div>
+    <div class="cart-columns">
+      <div class="cart-list">
+        <div class="list-header" aria-hidden="true"><span>商品</span><span>数量</span><span>小計</span></div>
+        <div id="items">
+      <article class="item" data-price="2860">
+        <img class="item__img" src="images/enamel-mug-320.webp" srcset="images/enamel-mug-320.webp 320w, images/enamel-mug-640.webp 640w" sizes="120px" width="320" height="320" alt="エナメルマグ">
+        <div class="item__info">
+          <div class="item__name-row"><a class="item__name" href="product.html">エナメルマグ</a><button class="item__remove" type="button" aria-label="エナメルマグを削除">削除</button></div>
+          <p class="item__price">¥2,860（税込）</p>
+        </div>
+        <div class="stepper stepper--sm" role="group" aria-label="エナメルマグの数量">
+          <button type="button" class="qty-minus" aria-label="数量を減らす">−</button>
+          <output class="qty-value">2</output>
+          <button type="button" class="qty-plus" aria-label="数量を増やす">＋</button>
+        </div>
+        <p class="item__total">¥5,720</p>
+      </article>
+      <article class="item" data-price="8800">
+        <img class="item__img" src="images/canvas-tote-320.webp" srcset="images/canvas-tote-320.webp 320w, images/canvas-tote-640.webp 640w" sizes="120px" width="320" height="320" alt="帆布トートバッグ">
+        <div class="item__info">
+          <div class="item__name-row"><a class="item__name" href="product.html">帆布トートバッグ</a><button class="item__remove" type="button" aria-label="帆布トートバッグを削除">削除</button></div>
+          <p class="item__price">¥8,800（税込）</p>
+        </div>
+        <div class="stepper stepper--sm" role="group" aria-label="帆布トートバッグの数量">
+          <button type="button" class="qty-minus" aria-label="数量を減らす">−</button>
+          <output class="qty-value">1</output>
+          <button type="button" class="qty-plus" aria-label="数量を増やす">＋</button>
+        </div>
+        <p class="item__total">¥8,800</p>
+      </article>
+      <article class="item" data-price="2420">
+        <img class="item__img" src="images/sierra-cup-320.webp" srcset="images/sierra-cup-320.webp 320w, images/sierra-cup-640.webp 640w" sizes="120px" width="320" height="320" alt="シェラカップ">
+        <div class="item__info">
+          <div class="item__name-row"><a class="item__name" href="product.html">シェラカップ</a><button class="item__remove" type="button" aria-label="シェラカップを削除">削除</button></div>
+          <p class="item__price">¥2,420（税込）</p>
+        </div>
+        <div class="stepper stepper--sm" role="group" aria-label="シェラカップの数量">
+          <button type="button" class="qty-minus" aria-label="数量を減らす">−</button>
+          <output class="qty-value">1</output>
+          <button type="button" class="qty-plus" aria-label="数量を増やす">＋</button>
+        </div>
+        <p class="item__total">¥2,420</p>
+      </article>
+        </div>
+        <p class="empty" id="empty" hidden>カートに商品がありません。</p>
+        <p class="continue"><a href="index.html#new-items">← 買い物を続ける</a></p>
+      </div>
+
+      <aside class="summary" aria-labelledby="sum-title">
+        <h2 id="sum-title">ご注文内容</h2>
+        <p class="row"><span>小計</span><b id="subtotal">¥16,940</b></p>
+        <p class="row"><span>送料</span><b id="shipping">¥0</b></p>
+        <p class="summary__note">11,000円以上のご注文で、送料は無料です</p>
+        <div class="summary__divider"></div>
+        <p class="row row--total"><span>合計（税込）</span><b id="total">¥16,940</b></p>
+        <button class="btn btn--primary btn--block" type="button" id="checkout">購入手続きへ進む</button>
+        <p class="summary__demo">この画面は自主制作のデザインです。実際の購入はできません</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div>
+        <p class="logo">ROAMNEL</p>
+        <p class="footer__tagline">歩く日を、少し軽くする道具。</p>
+      </div>
+      <div class="footer__links">
+        <nav class="footer__col" aria-label="お買いもの">
+          <h2>お買いもの</h2>
+          <a href="#">すべての道具</a>
+          <a href="index.html#new-items">新しく届いた道具</a>
+          <a href="index.html#types">道具の種類から探す</a>
+        </nav>
+        <nav class="footer__col" aria-label="ご案内">
+          <h2>ご案内</h2>
+          <a href="index.html#story">ROAMNELについて</a>
+          <a href="#">配送について</a>
+          <a href="#">返品・交換</a>
+          <a href="#">お問い合わせ</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__rule"></div>
+      <div class="footer__note">
+        <p>© ROAMNEL（自主制作・架空のブランド）</p>
+        <p>画像は一部AI生成です。　<a href="admin.html">管理画面（デモ）→</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
