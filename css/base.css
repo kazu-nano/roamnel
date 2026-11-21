@@ -1,5 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html {
+  color-scheme: light; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   background: var(--color-bg);
@@ -25,3 +26,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   padding-right: var(--pad-r);
 }
 .icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* The hidden attribute always wins over display rules set by classes */
+[hidden] { display: none !important; }
