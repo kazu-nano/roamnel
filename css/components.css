@@ -113,3 +113,8 @@
 
 .footer__note a { text-decoration: underline; text-underline-offset: 3px; }
 .footer__note a:hover { color: var(--color-surface); }
+
+/* Scroll reveal: js/main.js adds .reveal, then .is-visible when the element enters the viewport (not used with reduced motion). Shared by the top, product and cart pages. */
+.reveal:not(.is-visible) { opacity: 0; transform: translateY(16px); }
+.reveal.is-visible { animation: reveal-in .6s ease backwards; }
+@keyframes reveal-in { from { opacity: 0; transform: translateY(16px); } }

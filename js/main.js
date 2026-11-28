@@ -30,17 +30,26 @@
     });
   }
 
-  // ---- Scroll reveal (top page): fade in while rising 16px, once per element ----
-  // Elements that enter the viewport together are staggered by 0.1s each.
-  const revealTargets = document.querySelectorAll(
-    '.section__title, .scene, .type, .items__all .btn, .story__image, .story__title, .story__lead, .principles, .story__text .btn'
-  );
+  // ---- Scroll reveal (top, product, cart): fade in while rising 16px, once per element ----
+  // Elements that enter the viewport together are staggered by 0.1s each (up to 0.5s).
+  const REVEAL_TARGETS = [
+    // top
+    '.section__title', '.scene', '.carousel', '.scrollbar', '.items__all .btn', '.type',
+    '.story__image', '.story__title', '.story__lead', '.principles', '.story__text .btn',
+    // product
+    '.gallery', '.info', '.desc', '.specs', '.related__title', '.related__row',
+    // cart
+    '.page-title', '.item', '.summary', '.continue',
+    // footer
+    '.footer__top', '.footer__bottom',
+  ].join(', ');
+  const revealTargets = document.querySelectorAll(REVEAL_TARGETS);
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (revealTargets.length && 'IntersectionObserver' in window && !reduceMotion) {
     const revealer = new IntersectionObserver((entries) => {
       entries.filter((entry) => entry.isIntersecting).forEach((entry, i) => {
-        entry.target.style.animationDelay = `${i * 0.1}s`;
+        entry.target.style.animationDelay = `${Math.min(i, 5) * 0.1}s`;
         entry.target.classList.add('is-visible');
         revealer.unobserve(entry.target);
       });
