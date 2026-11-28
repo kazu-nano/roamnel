@@ -30,6 +30,28 @@
     });
   }
 
+  // ---- Scroll reveal (top page): fade in while rising 16px, once per element ----
+  // Elements that enter the viewport together are staggered by 0.1s each.
+  const revealTargets = document.querySelectorAll(
+    '.section__title, .scene, .type, .items__all .btn, .story__image, .story__title, .story__lead, .principles, .story__text .btn'
+  );
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (revealTargets.length && 'IntersectionObserver' in window && !reduceMotion) {
+    const revealer = new IntersectionObserver((entries) => {
+      entries.filter((entry) => entry.isIntersecting).forEach((entry, i) => {
+        entry.target.style.animationDelay = `${i * 0.1}s`;
+        entry.target.classList.add('is-visible');
+        revealer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+
+    revealTargets.forEach((el) => {
+      el.classList.add('reveal');
+      revealer.observe(el);
+    });
+  }
+
   // ---- "New items" carousel: arrows (PC) and the scroll indicator ----
   const scroller = document.getElementById('carousel-scroller');
   const thumb = document.getElementById('carousel-thumb');

@@ -158,3 +158,8 @@
   .story__image { aspect-ratio: 16 / 9; }
   .story__title { font-size: 28px; line-height: 36px; }
 }
+
+/* Scroll reveal: js/main.js adds .reveal, then .is-visible when the element enters the viewport (not used with reduced motion) */
+.reveal:not(.is-visible) { opacity: 0; transform: translateY(16px); }
+.reveal.is-visible { animation: reveal-in .6s ease backwards; }
+@keyframes reveal-in { from { opacity: 0; transform: translateY(16px); } }
