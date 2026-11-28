@@ -30,17 +30,15 @@
     });
   }
 
-  // ---- Scroll reveal (top, product, cart): fade in while rising 16px, once per element ----
+  // ---- Scroll reveal (top, product, footers): fade in while rising 16px, once per element ----
   // Elements that enter the viewport together are staggered by 0.1s each (up to 0.5s).
   const REVEAL_TARGETS = [
     // top
     '.section__title', '.scene', '.carousel', '.scrollbar', '.items__all .btn', '.type',
     '.story__image', '.story__title', '.story__lead', '.principles', '.story__text .btn',
-    // product
-    '.gallery', '.info', '.desc', '.specs', '.related__title', '.related__row',
-    // cart
-    '.page-title', '.item', '.summary', '.continue',
-    // footer
+    // product (the gallery and info are the first view, so they are not animated)
+    '.desc', '.specs', '.related__title', '.related__row',
+    // footer (cart has nothing else: its content is the first view)
     '.footer__top', '.footer__bottom',
   ].join(', ');
   const revealTargets = document.querySelectorAll(REVEAL_TARGETS);
